@@ -1,0 +1,304 @@
+/* 노토산스 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+/* reset */
+:root {
+    --text: #222;
+    --background: #fff;
+    --btn-color: #eaeaea;
+    --btn-hover-color: #eaeaea;
+    --point-color: #8d1d1d;
+    --point-hover-color: #420909;
+}
+
+* {
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+body, a, button, input, select, textarea {
+    color: var(--text);
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: -0.1rem;
+    outline: none;
+}
+
+div, h1, h2, h3, h4, h5, h6, a, p, ol, ul, li {
+    margin: 0;
+    padding: 0;
+    color: currentColor;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a, a:visited, a:link {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+
+input[type="checkbox"], input[type="submit"], button, label {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.blind {
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+button, a, input {
+    background-color: var(--btn-color);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover, a:hover, input:hover {
+    background-color: var(--btn-hover-color);
+}
+
+/* wrapper */
+.wrapper {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+    min-width: 620px;
+}
+
+header, .wrapper, footer {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--btn-color);
+}
+
+header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header .nav .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .nav .link:hover {
+    background: var(--btn-hover-color);
+    color: var(--point-color);
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid var(--btn-color);
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.sec-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec h1 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.sec h1 .check {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+/* dice */
+#dx_dice .dice-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    gap: 20px;
+}
+
+#dx_dice .dice-input input[type="number"], #dx_dice .btn-roll {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid var(--btn-color);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#dx_dice .dice-input input[type="number"]:hover {
+    background-color: var(--btn-hover-color);
+}
+
+#dx_dice .dice-input input[type="number"]::-webkit-inner-spin-button, #dx_dice .dice-input input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#dx_dice .btn-roll {
+    background-color: var(--point-color);
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+#dx_dice .btn-roll:hover {
+    background-color: var(--point-hover-color);
+}
+
+#dx_dice .dice-log {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* overed */
+#dx_overed .sec-wrap {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#dx_overed .sec-wrap > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#dx_overed button {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--point-color);
+    color: #fff;
+}
+
+#dx_overed button:hover {
+    background-color: var(--point-hover-color);
+}
+
+#dx_overed .overed-log {
+    padding: 10px;
+}
+
+/* lifepath */
+#dx_lifepath #one {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: var(--point-color);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.6rem;
+    gap: 5px;
+}
+
+#dx_lifepath #one svg {
+    position: relative;
+    top: 2px;
+}
+
+#dx_lifepath .btn-life-roll {
+    padding: 5px;
+    background-color: var(--point-color);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#dx_lifepath #one:hover, #dx_lifepath .btn-life-roll:hover {
+    background-color: var(--point-hover-color);
+}
+
+#dx_lifepath .item-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#dx_lifepath .lifepath-log {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 220px;
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+#dx_lifepath .lifepath-log > div {
+    padding: 5px 5px 0;
+}
+
+#dx_lifepath .lifepath-log .desc {
+    padding: 10px 5px 10px;
+    text-indent: 0.5rem;
+}
+
+#dx_lifepath .item-list .item, .lifepath-log {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+}
+
+/* footer */
+footer {
+    padding: 20px 0;
+    text-align: right;
+    color: var(--btn-hover-color);
+}
